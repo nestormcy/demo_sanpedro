@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Champiñones San Pedro</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Using a simple emoji for the mushroom icon if SVG is not available, or I could use FontAwesome via CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="app-container">
+        <div class="glass-panel">
+            <div class="logo-circle">
+                <i class="fa-solid fa-seedling"></i> <!-- Mushroom-like icon -->
+            </div>
+            
+            <div class="header-text">
+                <h1>Champiñones San Pedro</h1>
+                <p>Acceso WiFi Corporativo</p>
+            </div>
+
+            <form id="loginForm" onsubmit="handleLogin(event)">
+                <div class="input-group" style="margin-bottom: 1rem;">
+                    <label class="input-label" for="username">Usuario</label>
+                    <input type="text" id="username" class="input-field" placeholder="Ej. Pedro Pérez" value="Pedro Pérez" required>
+                </div>
+
+                <div class="input-group" style="margin-bottom: 1.5rem;">
+                    <label class="input-label" for="password">Contraseña</label>
+                    <input type="password" id="password" class="input-field" placeholder="RIF de la Empresa" value="J-12345678-9" required>
+                </div>
+
+                <button type="submit" class="btn-primary">CONECTAR</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function handleLogin(event) {
+            event.preventDefault();
+            // Simulate processing
+            const btn = document.querySelector('.btn-primary');
+            const originalText = btn.innerText;
+            btn.innerText = "Conectando...";
+            btn.style.opacity = "0.8";
+            
+            setTimeout(() => {
+                window.location.href = 'bienvenida.html';
+            }, 800); // 800ms delay for effect
+        }
+    </script>
+
+</body>
+</html>

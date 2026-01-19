@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --color-forest: #264636;
+    --color-earth: #a0785a;
+    --color-cream: #f4f1ea;
+    --color-glass: rgba(255, 255, 255, 0.1);
+    --color-glass-border: rgba(255, 255, 255, 0.2);
+    --shadow-deep: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    --radius-large: 24px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-cream);
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Dark Overlay */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay for readability */
+    z-index: 0;
+}
+
+/* Container for all content ensuring it sits above the overlay */
+.app-container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 414px; /* Simulation of high-end mobile width */
+    padding: 20px;
+}
+
+/* Glassmorphism Panel */
+.glass-panel {
+    background: var(--color-glass);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid var(--color-glass-border);
+    border-radius: var(--radius-large);
+    box-shadow: var(--shadow-deep);
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Typography & Elements */
+h1 {
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+p {
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+.logo-circle {
+    width: 100px;
+    height: 100px;
+    background: var(--color-cream);
+    border-radius: 50%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-forest);
+    font-size: 3rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Inputs */
+.input-group {
+    text-align: left;
+}
+
+.input-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: var(--color-cream);
+}
+
+.input-field {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.input-field::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.input-field:focus {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: var(--color-earth);
+}
+
+/* Buttons */
+.btn-primary {
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    border: none;
+    background: var(--color-earth);
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.1s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    background: #8e6a50; /* Slightly darker earth */
+}
+
+.btn-primary:active {
+    transform: scale(0.98);
+}
+
+/* Demo Ribbon */
+.demo-ribbon {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #FFD700; /* Yellow */
+    color: #333;
+    text-align: center;
+    padding: 8px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Dashboard Grid */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.dashboard-card {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    padding: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    backdrop-filter: blur(5px);
+    transition: transform 0.2s;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.card-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.card-content h3 {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-bottom: 0.2rem;
+    font-weight: 500;
+}
+
+.card-content p {
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.status-success {
+    color: #4ade80; /* Bright green for text/icons */
+}

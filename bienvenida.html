@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenida - Champiñones San Pedro</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="demo-ribbon">
+        MODO DEMOSTRACIÓN - DATOS SIMULADOS
+    </div>
+
+    <div class="app-container" style="padding-top: 60px;"> <!-- Padding for ribbon -->
+        <div class="glass-panel" style="text-align: left; align-items: stretch;">
+            
+            <div class="greeting-section" style="text-align: center; margin-bottom: 1rem;">
+                <div class="logo-circle" style="width: 60px; height: 60px; font-size: 1.8rem; margin-bottom: 1rem;">
+                    <i class="fa-solid fa-user-check"></i>
+                </div>
+                <h2>Bienvenido, Sr. Pedro</h2>
+                <p style="color: var(--color-earth); font-weight: 600;">(Acceso Gerencial)</p>
+            </div>
+
+            <div class="dashboard-grid">
+                <!-- IoT Card -->
+                <div class="dashboard-card">
+                    <div class="card-icon status-success">
+                        <i class="fa-solid fa-wifi"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Estado de Sensores</h3>
+                        <p>8 Activos</p>
+                        <span style="font-size: 0.75rem; color: #aaa;">Prioridad 1 - Crítica</span>
+                    </div>
+                </div>
+
+                <!-- Attendance Card -->
+                <div class="dashboard-card">
+                    <div class="card-icon" style="color: #60a5fa;">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Control de Personal</h3>
+                        <p>58/60 en planta</p>
+                    </div>
+                </div>
+
+                <!-- Data Card -->
+                <div class="dashboard-card">
+                    <div class="card-icon" style="color: #f472b6;">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Consumo</h3>
+                        <p>320 MB <span style="font-weight: 400; font-size: 0.9rem;">/ Ilimitado</span></p>
+                        <span style="font-size: 0.75rem; color: #aaa;">Sesión Admin</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="action-section" style="margin-top: 1.5rem;">
+                <button class="btn-primary" onclick="alert('Redirigiendo al panel completo...')">
+                    Ir al Panel de Gestión Completo
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
