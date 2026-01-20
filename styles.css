@@ -101,13 +101,18 @@ p {
     /* Ensure image stays inside circle */
     background: transparent;
     /* Remove cream background if logo is transparent */
+    padding: 0;
+    border: 2px solid var(--color-earth);
 }
 
 .logo-img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
-    /* Or cover, depending on the logo */
+    object-fit: cover;
+    /* Cover ensures it fills the circle, cropping edges */
+    transform: scale(1.1);
+    /* Zoom in slightly to cut off potential borders/whitespace */
+    border-radius: 50%;
 }
 
 /* Inputs */
